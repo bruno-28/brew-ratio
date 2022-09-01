@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import BrewMethod from "./components/BrewMethod";
+import RatioOption from "./components/RatioOption";
+import Ingredient from "./components/Ingredient";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <h1>Brew Ratio</h1>
+      </div>
+      <BrewMethod />
+      <RatioOption />
+      <Ingredient name="Beans" />
+      <Ingredient name="Water" />
     </div>
   );
 }
