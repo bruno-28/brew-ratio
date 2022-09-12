@@ -1,19 +1,31 @@
 import BrewMethod from "./components/BrewMethod";
-import RatioOption from "./components/RatioOption";
 import Ingredient from "./components/Ingredient";
+import React from "react";
 
-function App() {
-  return (
-    <div>
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { beansMass: 10, waterMass: 60 };
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({ beansMass: event.target.value });
+  }
+
+  render() {
+    return (
       <div>
-        <h1>Brew Ratio</h1>
+        <div>
+          <h1>Brew Ratio</h1>
+        </div>
+        <BrewMethod />
+        <Ingredient name="Beans" value={this.state.beansMass} onChange={this.handleChange} />
+        <Ingredient name="Water" value={this.state.waterMass} />
       </div>
-      <BrewMethod />
-      <RatioOption />
-      <Ingredient name="Beans" />
-      <Ingredient name="Water" />
-    </div>
-  );
+    );
+  }
 }
 
 export default App;

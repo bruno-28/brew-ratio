@@ -1,11 +1,9 @@
 import React from "react";
-import RatioButton from "./RatioButton";
 
-export default function RatioOption() {
+export default function RatioOption(props) {
   return (
-    <div>
-      <label>Ratio: </label>
-      <RatioButton ratio="1:6" />
-    </div>
+    <>
+      <label>Ratio: {props.ratio}</label>
+    </>
   );
 }
