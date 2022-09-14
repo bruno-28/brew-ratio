@@ -1,0 +1,32 @@
+/* base stypes */
+* {
+    margin: 0;
+    /*font-family: "Quicksand";*/
+    color: #333;
+}
+
+.content {
+    max-width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.title {
+    padding: 6px 0;
+    border-bottom: 1px solid black;
+}
+
+.brew-method {
+    margin: 10px auto;
+}
+
+.select {
+    max-width: 150px;
+    margin-right: 10px;
+}
+
+.ingredient {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

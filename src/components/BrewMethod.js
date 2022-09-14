@@ -7,7 +7,9 @@ export default function BrewMethod() {
 
   function handleChange(event) {
     let brewMethod = event.target.value;
+    
     setMethod(brewMethod);
+    
     switch (brewMethod) {
       case 'pourOver':
         setRatio('1:6');
